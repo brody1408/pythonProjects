@@ -1,0 +1,27 @@
+# basic calculater
+
+num1 = input("Enter your first number: ")
+num2 = input("Enter your second number: ")
+
+print("Here is your answer: ")
+
+# float function allows for numbers to be added, both whole and decimal
+
+results = float(num1) * float(num2)
+
+print(results)
+
+
+
+
+print("This is a basic calculator")
+print("The input fields will populate and you can add them together")
+
+num3 = input("Enter the first number: ")
+num4 = input("Enter the second number: ")
+
+print("Here is your answer")
+
+result = float(num3) + float(num4)
+
+print(result)

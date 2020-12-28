@@ -1,0 +1,36 @@
+# This is a guessing game featuring Harry Potter content
+# Your goal is to guess the secret word within 3 guesses
+
+opening_statement = "Hello, this is a guessing game featuring Harry Potter trivia. You have 3 chances to guess the secret word."
+opening_statement_2 = "\nEach time you get it wrong, you'll receive a clue. Don't get it right after 3 guesses, you'll lose."
+clue_1 = "Clue number 1: Their weapon is a sword."
+clue_2 = "Clue number 2: It's one of the houses, and it's first name is Godrick."
+clue_3 = "Clue number 3: Harry, Hermione and Ron are in this house."
+secret_word = "Gryfindor"
+guess = ""
+number_of_guess = 1
+guess_limit = 4
+out_of_guesses = False
+
+print(opening_statement, opening_statement_2)
+
+while guess != secret_word and not out_of_guesses:
+    if number_of_guess <= 1:
+        print(clue_1)
+        guess = input("Enter your 1st guess: ")
+        number_of_guess += 1
+    elif number_of_guess <= 2:
+        print(clue_2)
+        guess = input("Enter your 2nd guess: ")
+        number_of_guess += 1
+    elif number_of_guess <= 3:
+        print(clue_3)
+        guess = input("Enter your final guess: ")
+        number_of_guess += 1
+    else:
+        if number_of_guess == 4:
+            out_of_guesses = True
+if out_of_guesses is True:
+    print("You are out of guesses, the correct answer was Gryfindor")
+else:
+    print("You guessed it correctly. Great Job!!")
